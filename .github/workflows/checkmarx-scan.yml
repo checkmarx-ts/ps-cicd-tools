@@ -26,5 +26,6 @@ jobs:
           cx-tenant: ${{ secrets.CX_TENANT }}
           cx-client-id: ${{ secrets.CX_CLIENT_ID }}
           cx-client-secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cx-cli-debug: true
           build-container-tag: amazoncorretto:21
           upload-sarif-file: false
