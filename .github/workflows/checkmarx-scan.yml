@@ -22,9 +22,9 @@ jobs:
         id: scan
         uses: checkmarx-ts/cxone-plusplus-github-action@v2
         with:
-          cx-tenant: ${{ secrets.CX_TENANT }}
-          cx-client-id: ${{ secrets.CX_CLIENT_ID }}
-          cx-client-secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cx-tenant: ${{ secrets.CXONE_TENANT }}
+          cx-client-id: ${{ secrets.CXONE_CLIENT_ID }}
+          cx-client-secret: ${{ secrets.CXONE_CLIENT_SECRET }}
           cx-cli-debug: true
           build-container-tag: amazoncorretto:17
           upload-sarif-file: false
