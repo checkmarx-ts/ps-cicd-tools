@@ -16,9 +16,14 @@ on:
           required: true
       
                
+permissions:
+  contents: read
+
 jobs:
   build-cicd-tools:
-    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # for ncipollo/release-action to create a release
+    runs-on: cx-public-ubuntu-x64
     outputs:
       success_value: ${{ steps.complete.outputs.success }}
     steps:
