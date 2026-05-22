@@ -2,9 +2,12 @@ name: CI Build
 on: 
     push:
 
+permissions:
+  contents: read
+
 jobs:
     build-and-test:
-        runs-on: ubuntu-latest
+        runs-on: cx-public-ubuntu-x64
         steps:
             - uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9
               with:
